@@ -1,6 +1,7 @@
 # hyprland config files
+## my Hyprland configuration on Arch Linux
 
---- Borders ---
+***--- Animated Borders ---***
 
 *borders_color.sh*: script to animate borders
 
