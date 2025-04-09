@@ -1,7 +1,6 @@
-# hyprland config files
-## my Hyprland configuration on Arch Linux
+# my Hyprland configuration on Arch Linux
 
-***--- Animated Borders ---***
+### ***--- Animated Borders ---***
 
 *borders_color.sh*: script to animate borders
 
@@ -21,4 +20,11 @@ How to apply:
    **chmod +x ~/.config/hypr/borders_color.sh**
    
    **hyprctl reload**
+   
 
+
+### ***--- Waybar ---***
+
+To make it work, you need to download fonts:
+
+   **sudo pacman -S nerd-fonts** (for arch)
