@@ -32,13 +32,13 @@ To make it work, you need to download fonts:i8
 If you want to create your own theme with colors of the wallpaper:
 1. Create "example.css" in ~/.config/waybar or make a folder ~/.config/waybar/styles/ and insert:
    
-   **@define-color text1 #000000**
+   **@define-color text1 #000000;**
 
    'text1' and 'shadow1' colors are for left and right modules, 'text2' and 'shadow2' colors are for central module.
 
 2. Write in main style.css (~/.config/waybar/style.css):
    
-   **import "/home/user/.config/waybar/example.css"**
+   **import "/home/user/.config/waybar/example.css";**
 
 3. Run **killall waybar && waybar**
 
