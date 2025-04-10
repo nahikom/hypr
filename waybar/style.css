@@ -1,13 +1,17 @@
+/* text1 & shadow1 for modules left & right */
+/* text2 & shadow2 for module center */
+@import "/home/nahikom/.config/waybar/styles/style11.css";
+
 * {
   font-family: "CodeNewRoman Nerd Font Propo";
   font-size: 18px;
 }
 
 window#waybar {
-  background: linear-gradient(0deg, rgba(30,30,45,0.9) 0%, rgba(30,30,45,0.5) 100%); 
+  background: linear-gradient(0deg, rgba(30,30,30,0.9) 0%, rgba(30,30,30,0.7) 70%,  rgba(30,30,30,0.5) 100%); 
   border-radius: 15px;
-  border: 1px solid rgba(255, 255, 255, 0.2);
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+  border: 1px solid rgba(0, 0, 0, 0.2);
+  box-shadow: 0 0 10px rgba(255, 255, 255, 0.2);
 }
 
 .modules-left,
@@ -28,6 +32,11 @@ window#waybar {
   padding: 5px 10px;
 }
 
+#custom-arch {
+  font-size: 25px;
+  text-shadow: 2px 2px 2px @shadow2, 0 0 2em @shadow1, 0 0 0.2em @shadow1;
+}
+
 button {
   /* Use box-shadow instead of border so the text isn't offset */
   box-shadow: inset 0 -3px transparent;
@@ -45,7 +54,7 @@ button:hover {
 #workspaces button {
   padding: 0 5px;
   background-color: transparent;
-  color: #a6aae4;
+  color: @text1;
   font-size: 18px;
 }
 
@@ -54,7 +63,7 @@ button:hover {
 }
 
 #workspaces button.focused {
-  background-color: #a6aae4;
+  background-color: @text1;
   color: #24273a;
   box-shadow: inset 0 -3px #ffffff;
 }
@@ -79,14 +88,22 @@ button:hover {
 #network,
 #pulseaudio,
 #language {
-  color: #a6aae4;
+  color: @text1;
   padding: 0 10px;
+  text-shadow: 0 0 1em @shadow1, 0 0 0.2em @shadow1;
 }
 
 #window {
-  color: #cad3f5;
+  color: @text2;
+  text-shadow: 1px 1px 2px @shadow2, 0 0 1em @shadow1, 0 0 0.2em @shadow1;
 }
 
+tooltip {
+    background-color: rgba(30, 30, 45, 0.9);
+    border-radius: 8px;
+    padding: 12px;
+    font-family: "Noto Sans", sans-serif;
+}
 
 
 #battery.charging,
